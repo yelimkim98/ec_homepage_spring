@@ -24,12 +24,12 @@ public class SwaggerConfig {
     @Bean
     public Docket commonApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-            .groupName("example")
+            .groupName("members")
             .apiInfo(this.apiInfo())
             .select()
             .apis(RequestHandlerSelectors
                 .basePackage("com.endlesscreation.ecsite.controller"))
-            .paths(PathSelectors.ant("/**"))
+            .paths(PathSelectors.ant("/members/**"))
             .build();
     }
 }

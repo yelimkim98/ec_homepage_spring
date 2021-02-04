@@ -29,7 +29,7 @@ public class SwaggerConfig {
             .select()
             .apis(RequestHandlerSelectors
                 .basePackage("com.endlesscreation.ecsite.controller"))
-            .paths(PathSelectors.ant("/members/**"))
+            .paths(PathSelectors.ant("/**"))
             .build();
     }
 }
